@@ -34,9 +34,15 @@ while is_running: #begin wile loop
     button_rect1 = pygame.draw.rect(window_surface, "blue", (250, 500, 300, 100)) #
     button_rect2 = pygame.draw.rect(window_surface, "blue", (250, 650, 300, 100)) #
     mainTitleSurface = pygame.font.SysFont("Arial", 50)
+    MainTitleButtonSurface = pygame.font.SysFont("Arial", 30)
     mainTitle = mainTitleSurface.render("Chess but gay✡️", False, "Black")
+    versusButton = MainTitleButtonSurface.render("Play", False, "Black")
+    botButton = MainTitleButtonSurface.render("Go against a bot", False, "Black")
+    settingsButton = MainTitleButtonSurface.render("Settings✡️", False, "Black")
     window_surface.blit(mainTitle, (250, 200))
-    
+    window_surface.blit(versusButton, (300, 375))
+    window_surface.blit(botButton, (275, 525))
+    window_surface.blit(settingsButton, (275, 675))
     
     
     
