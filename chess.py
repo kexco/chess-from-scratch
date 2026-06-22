@@ -23,7 +23,8 @@ while is_running: #begin wile loop
     for event in pygame.event.get(): # start for loop for pygane gevents
         if event.type == pygame.QUIT: # if then statement
             is_running = False # set is run to false
-
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            pass
     window_surface.blit(background, (0, 0, 800, 800)) # surface color change 
     
 
@@ -39,15 +40,20 @@ while is_running: #begin wile loop
     versusButton = MainTitleButtonSurface.render("Play", False, "Black")
     botButton = MainTitleButtonSurface.render("Go against a bot", False, "Black")
     settingsButton = MainTitleButtonSurface.render("Settings✡️", False, "Black")
+    #main title surface merge
     window_surface.blit(mainTitle, (250, 200))
+    #buttons text surface merge
     window_surface.blit(versusButton, (300, 375))
     window_surface.blit(botButton, (275, 525))
     window_surface.blit(settingsButton, (275, 675))
     
     
-    
-    
-    
+    #menu mouse interactions.
+    click = pygame.mouse.get_pressed
+    mousex, mousey = pygame.mouse.get_pos()
+    print(click, mousex, mousey)
+    if click == True:
+        print("click!")
     
     
     
